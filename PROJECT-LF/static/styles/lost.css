@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+}
+
+form {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
