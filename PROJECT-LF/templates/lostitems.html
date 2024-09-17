@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Items</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/lostitems.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1 class="mb-1">LOFO.VK</h1>
+        <h2 class="mb-3">IIT BBS</h2>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('about') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Lost Items</h1>
+        <div class="items-list mt-4">
+            {% if items %}
+                <ul class="list-group">
+                    {% for item in items %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>{{ item.item }}</strong><br>
+                                <small>Location: {{ item.location }}</small><br>
+                                <small>Description: {{ item.description }}</small>
+                            </div>
+                            <a href="{{ url_for('delete_lost', id=item.id) }}" class="btn btn-success btn-sm">Found it</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-center mt-5">No lost items to show &#128533;</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background color */
+    color: #333; /* Dark text color for contrast */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffcc00; /* Bright color for emphasis */
+}
+
+header h2 {
+    margin: 5px 0 0 0;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.nav-link {
+    color: #ffcc00 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro {
+    background-color: #ffffff; /* Light background color */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.intro h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+}
+
+.btn-lg {
+    font-size: 1.5em;
+    padding: 15px 30px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

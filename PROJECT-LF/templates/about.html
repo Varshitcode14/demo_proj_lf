@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lofo.vk</title>
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>About Us</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('about') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>Lofo.vk is dedicated to helping students at IIT BBS find their lost items with ease. We strive to create a safe and supportive community.</p>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Lofo.vk. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

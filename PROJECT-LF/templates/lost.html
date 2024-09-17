@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/lost.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1 class="mb-1">LOFO.VK</h1>
+        <h2 class="mb-3">IIT BBS</h2>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('about') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Report a Lost Item</h1>
+        <form method="POST" action="{{ url_for('lost') }}" class="shadow p-4 rounded">
+            <div class="form-group">
+                <label for="item">Item</label>
+                <select id="item" name="item" class="form-control">
+                    <option value="phone">Phone</option>
+                    <option value="keys">Keys</option>
+                    <option value="book">Book</option>
+                    <option value="bag">Bag</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" name="location" class="form-control">
+                    <option value="main_gate">Main Gate</option>
+                    <option value="main_building">Main Building</option>
+                    <option value="laboratory_complex">Laboratory Complex</option>
+                    <option value="workshops">Workshops</option>
+                    <option value="mahanadi_hall">Mahanadi Hall Of Residence</option>
+                    <option value="brahmaputra_hall">Brahmaputra Hall Of Residence</option>
+                    <option value="student_activity_centre">Student Activity Centre</option>
+                    <option value="ganga_hall">Ganga Hall Of Residence</option>
+                    <option value="subarnarekha_hall">Subarnarekha Hall Of Residence</option>
+                    <option value="faculty_quaters">Faculty Quarters</option>
+                    <option value="shopping_complex">Shopping Complex</option>
+                    <option value="guest_house">Guest House</option>
+                    <option value="community_center">Community Center</option>
+                    <option value="staff_quaters_dispensary">Staff Quarters & Dispensary</option>
+                    <option value="ses">SES - School Of Electrical Sciences</option>
+                    <option value="sbs">SBS - School Of Basic Sciences</option>
+                    <option value="sif">SIF - School of Infrastructure</option>
+                    <option value="sms">SMS - School Of Mechanical Sciences</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
